@@ -37,5 +37,7 @@ public:
 
 	bool thereIs(int val);
 
+	unsigned int randomNumber();
+
 };
 

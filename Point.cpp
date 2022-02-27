@@ -33,26 +33,28 @@ void Point::draw(SDL_Renderer* renderer,int k)
 {
 	//SDL_RenderClear(renderer);
 	int K = 0 ;// (5 - terrain.NUMBER);
-	int valueModifier = 5;
-	if (k != 50) k = value;
+	int valueModifier = 0;
+	//if (k != 50) k = value;
 
-	pointRect.y += 250;
-	pointRect.x += 0;
+	//pointRect.y += 100;
+	//pointRect.x -= 1000;
 	if (value != -1)
 	{
-		pointRect.y -= value * valueModifier + K;
+		//pointRect.y -= value * valueModifier + K;
+		// 
 		//D(pointRect.w);
 		//D(pointRect.h);
 		
-		pointRect.h += value * valueModifier;
-		if (k == 50) {
+		//pointRect.h += value * valueModifier;
+
+		/*if (k == 50) {
 			SDL_RenderCopyF(renderer, cm.m_models.at(k), NULL, &pointRect);
 		}
 		else {
 			SDL_RenderCopyF(renderer, cm.m_models.at(value), NULL, &pointRect);
-		}
+		}*/
 		
-		pointRect.h -= value * valueModifier;
+		//pointRect.h -= value * valueModifier;
 		
 		/*pointRect.w += 0.3f;
 		if (value + 20 <= 100) SDL_RenderCopyF(renderer, cm.m_models.at(value + 20), NULL, &pointRect);
@@ -61,7 +63,7 @@ void Point::draw(SDL_Renderer* renderer,int k)
 
 		SDL_RenderCopyF(renderer, cm.m_models.at(value), NULL, &pointRect);
 		//D(" ");
-		pointRect.y += value * valueModifier + K;
+		//pointRect.y += value * valueModifier + K;
 	}
 	//pointTexture = orPointTexture;
 

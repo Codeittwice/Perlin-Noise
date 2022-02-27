@@ -1,4 +1,5 @@
 #include "ConfigManager.h"
+#include "defines.h"
 
 void ConfigManager::init(SDL_Renderer* renderer)
 {
@@ -15,8 +16,9 @@ void ConfigManager::init(SDL_Renderer* renderer)
 		SDL_FreeSurface(loadSurface);
 
 		
-		/*int r = 255 - (int)(2.55 * double(i));
-		SDL_SetTextureColorMod(texture, r, r, r);*/
+		int r = 255 - (int)(2.55 * double(i));
+		//cout << i << " - " << r << endl;
+		SDL_SetTextureColorMod(texture, r, r, r);
 		
 		/*
 		int r = 255 - (int)(2.55 * double(i));
@@ -42,15 +44,17 @@ void ConfigManager::init(SDL_Renderer* renderer)
 		}
 		*/
 
-		int r = /*255 - */(int)(2.55 * double(i));
-		if (i < 30)
+		/// LAVA MAP
+		/*
+		int r = (int)(2.55 * double(i));
+		if (i < 1)
 		{
 
-			SDL_SetTextureColorMod(texture, 255 - i, 60 - i, 0);
+			SDL_SetTextureColorMod(texture, 255 - i, 102 - i, 0);
 		}
-		else if (i > 29 && i < 80)
+		else if (i > 0 && i < 80)
 		{
-			SDL_SetTextureColorMod(texture, 30 - r / 8 , 30 - r / 8, 30 - r / 8);
+			SDL_SetTextureColorMod(texture, 20 - i / 4 , 20 - i / 4, 20 - i / 4);
 		}
 		else if (i > 79 && i < 90)
 		{
@@ -60,7 +64,7 @@ void ConfigManager::init(SDL_Renderer* renderer)
 		{
 			SDL_SetTextureColorMod(texture, 0, 0, 0);
 		}
-
+		*/
 		m_models.insert(pair<int, SDL_Texture*>(i, texture));
 	}
 }

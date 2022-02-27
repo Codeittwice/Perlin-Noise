@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
     D("map3 ready ...");
 
 
-    int a = 3, b = 4, c = 3;
+    int a = 3, b = 1, c = 1;
     for (int i = 0; i < ROWS; i++)
     {
         for (int j = 0; j < COLLS; j++)
@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     SDL_RenderClear(renderer);
 
     D("drawing ...");
-    //drawWorld();
+    drawWorld();
 
     terrain.draw(renderer);
     /*for (int i = 0; i < 1; i++) {
